@@ -1,6 +1,6 @@
 # emcb-usecases
 
-### Test and validate the benefit of Energy-Management-Circuit-Breakers with Actual DERs.
+Test and validate the benefit of Energy-Management-Circuit-Breakers with Actual DERs.
 
 ### Objectives:
 In this project, we study the benefits of EMCBs in demand response and peak load mitigation.
