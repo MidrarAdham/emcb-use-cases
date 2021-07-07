@@ -25,7 +25,13 @@ The simulation part of this project uses GridLAB-D. GridLAB-D is an open source 
 * Cold Load Pickup Mitigation.
 * Islanding Support
 
-* <EWH>_<HPWH><HPWH_mode>
-  For example, when a heat pump water heater is in Hybrid mode:
-      * EWH_HPWH_Hybrid
+### Data Files Naming Convention:
+
+<EWH>_<HPWH><HPWH_mode>
+
+  For example, if a heat pump water heater is in a Hybrid mode:
+  * ewh_hpwh_e
+    * Heat_Pump_Water_Heater is in Resistive Mode.
+* hpwh_ewh
+    * Heat_Pump_Water_Heater is in Heat Pump Mode.
   
