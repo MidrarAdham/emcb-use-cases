@@ -23,4 +23,9 @@ The simulation part of this project uses GridLAB-D. GridLAB-D is an open source 
 * Load Research.
 * EV Managed Charging.
 * Cold Load Pickup Mitigation.
-* Islanding Support.
+* Islanding Support
+
+* <EWH>_<HPWH><HPWH_mode>
+  For example, when a heat pump water heater is in Hybrid mode:
+      * EWH_HPWH_Hybrid
+  
