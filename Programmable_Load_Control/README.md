@@ -33,7 +33,7 @@ The simulation part of this project uses GridLAB-D. GridLAB-D is an open source 
     
     * For example, if the data for the Electric Water heater, the name would look like: EWH_VP1.csv
 
-#### For files from Power Analyzer:
+### For files from Power Analyzer:
 
 \<EWH\>-\<HPWH\>-\<HPWH_mode\>
 
