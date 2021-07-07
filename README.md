@@ -31,10 +31,8 @@ The simulation part of this project uses GridLAB-D. GridLAB-D is an open source 
 
 For example, if a heat pump water heater is in a Hybrid mode:
 
-* ewh_hpwh_Electric
+* hpwh_ewh_Hybrid
 
 Heat_Pump_Water_Heater is in Resistive Mode.
 
-* hpwh_ewh_Hybrid
-
-Heat_Pump_Water_Heater is in Heat Pump Mode.
+* ewh_hpwh_Electric
