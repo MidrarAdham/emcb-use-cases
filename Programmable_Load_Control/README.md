@@ -30,15 +30,16 @@ The simulation part of this project uses GridLAB-D. GridLAB-D is an open source 
 For files from Virtual Peaker website:
 
 * \<which_water_heater\>-\<vp\>\<day\>
+    
     * For example, if the data for the Electric Water heater, the name would look like: EWH_VP1.csv
 
-For files from Virtual Peaker website:
+For files from Power Analyzer:
 
 \<EWH\>-\<HPWH\>-\<HPWH_mode\>
 
 For example, if a heat pump water heater is in a Hybrid mode:
 
-* hpwh_ewh_Hybrid
+* ewh_hpwh_Hybrid
 
 Heat_Pump_Water_Heater is in Resistive Mode.
 
