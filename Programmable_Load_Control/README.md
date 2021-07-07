@@ -35,12 +35,8 @@ The simulation part of this project uses GridLAB-D. GridLAB-D is an open source 
 
 ### For files from Power Analyzer:
 
-\<EWH\>-\<HPWH\>-\<HPWH_mode\>
+* \<EWH\>-\<HPWH\>-\<HPWH_mode\>
 
-For example, if a heat pump water heater is in a Hybrid mode:
+    * For example, if a heat pump water heater is in a Hybrid mode: ewh_hpwh_Hybrid
 
-* ewh_hpwh_Hybrid
-
-Heat_Pump_Water_Heater is in Resistive Mode.
-
-* ewh_hpwh_Electric
+    * Heat_Pump_Water_Heater is in Resistive Mode: ewh_hpwh_Electric
