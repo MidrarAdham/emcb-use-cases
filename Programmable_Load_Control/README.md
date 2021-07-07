@@ -27,6 +27,13 @@ The simulation part of this project uses GridLAB-D. GridLAB-D is an open source 
 
 ### Data Files Naming Convention:
 
+For files from Virtual Peaker website:
+
+* \<which_water_heater\>-\<vp\>\<day\>
+    * For example, if the data for the Electric Water heater, the name would look like: EWH_VP1.csv
+
+For files from Virtual Peaker website:
+
 \<EWH\>-\<HPWH\>-\<HPWH_mode\>
 
 For example, if a heat pump water heater is in a Hybrid mode:
