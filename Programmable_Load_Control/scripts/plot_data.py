@@ -1,3 +1,5 @@
+# This script plot two x axis and two y axis in the same plot. This is used to verify the recorded data from the power analyzer and the recorded data from virtualPeaker.com are the same.
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import datetime
@@ -12,6 +14,8 @@ df = pd.read_csv('/Users/midrar/Desktop/EMCB/emcb-usecases/Programmable_Load_Con
 
 
 df2 = pd.read_csv('/Users/midrar/Desktop/EMCB/emcb-usecases/Programmable_Load_Control/Data/ewh_hpwh/Day1_Data/data.csv',parse_dates=True)
+
+
 print(df[df['watts_Sum_EWH']> 100])
 
 # convert df timestamp object to datetime

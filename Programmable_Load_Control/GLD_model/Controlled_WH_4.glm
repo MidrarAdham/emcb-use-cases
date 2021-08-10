@@ -18,7 +18,7 @@ module residential {
     implicit_enduses NONE;
 }
 module tape;
-"
+
 object overhead_line_conductor:100 {
 	geometric_mean_radius 0.0244;
 	resistance 0.306;
@@ -192,24 +192,25 @@ object house {
         name wh1;
         location INSIDE;
         temperature 120;
-//        water_demand demand;
         heat_mode ELECTRIC;
         heating_element_capacity 4.5 kW;
-        thermostat_deadband 2;
+        thermostat_deadband 5;
         inlet_water_temperature 60;
         tank_setpoint 119;
         tank_UA 3.3;
         tank_volume 50;
-	object player {
-		file water_demand.csv;
-		property water_demand;
+		object player {
+			file water_demand.csv;
+			property water_demand;
+		};
 	};
 }
 object recorder {
 	file "wh_1.csv";
-	interval 300;
+	interval 60;
 	parent wh1;
-	property height,tank_setpoint,waterheater_model,power.real,constant_power,constant_current,water_demand,temperature,is_waterheater_on;
+	property constant_power,power.real;
+//	property height,tank_setpoint,waterheater_model,power.real,constant_power,constant_current,water_demand,temperature,is_waterheater_on;
 	}
 
 ///////////////////////////////
