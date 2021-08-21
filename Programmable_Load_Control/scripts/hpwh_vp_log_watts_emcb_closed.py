@@ -26,14 +26,15 @@ def hpwh_vp_vs_log_loadup(log,vp):
     y = log['consumed_watts']
     y2 = vp['circuit-breaker-total-power']* 1000
     fig,ax = plt.subplots(2,figsize=(12,8))
-    ax[0].xaxis.set_major_locator(plt.NullLocator())
+    ax[0].xaxis.set_major_locator(plt.MaxNLocator(30))
     ax[1].xaxis.set_major_locator(plt.MaxNLocator(30))
     ax[0].plot(x2,y2,label='VP Recorded Data')
     ax[1].plot(x,y,label='WH Station Data')
     ax[1].set_xlabel('time (Hours:minutes)')
     ax[0].set_ylabel('Real Power (W)')
     ax[1].set_ylabel('Real Power (W)')
-    plt.xticks(rotation=90)
+    ax[0].tick_params(axis='x',rotation=90)
+    ax[1].tick_params(axis='x',rotation=90)
     x2_max = vp['time'].max()
     ax[0].set_xlim([0,x2_max])
     x_max = log['timestamp'].max()
@@ -45,7 +46,7 @@ def hpwh_vp_vs_log_loadup(log,vp):
     ax[1].annotate('Load Up Command Received',xy=('05:55',0),xytext=(0,200),arrowprops=dict(arrowstyle='-|>'))
     #plt.show()
     plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/hpwh/overleaf_figures/hpwh_load_up_emcb_closed.png")
-hpwh_vp_vs_log_loadup(df1,df2)
+#hpwh_vp_vs_log_loadup(df1,df2)
 
 
 
@@ -74,14 +75,17 @@ def hpwh_vp_vs_log_noloadup(log,vp):
     y = log['consumed_watts']
     y2 = vp['circuit-breaker-total-power']* 1000
     fig,ax = plt.subplots(2,figsize=(12,8))
-    ax[0].xaxis.set_major_locator(plt.NullLocator())
+    ax[0].yaxis.set_major_locator(plt.MaxNLocator(6))
+    ax[1].yaxis.set_major_locator(plt.MaxNLocator(6))
+    ax[0].xaxis.set_major_locator(plt.MaxNLocator(30))
     ax[1].xaxis.set_major_locator(plt.MaxNLocator(30))
     ax[0].plot(x2,y2,label='VP Recorded Data')
     ax[1].plot(x,y,label='WH Station Data')
     ax[1].set_xlabel('time (Hours:minutes)')
     ax[0].set_ylabel('Real Power (W)')
     ax[1].set_ylabel('Real Power (W)')
-    plt.xticks(rotation=90)
+    ax[0].tick_params(axis='x',rotation=90)
+    ax[1].tick_params(axis='x',rotation=90)
     ax[0].legend(loc='upper right')
     ax[1].legend(loc='upper right')
     ax[0].set_title('HPWH Consumed Watts: WH Station and VP')
