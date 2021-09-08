@@ -3,14 +3,17 @@ import matplotlib.pyplot as plt
 import datetime as dt
 import matplotlib.dates as mdates
 
-hpwh_log="/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/Data/final_logs/hpwh_logs/hpwh_no_loadup_emcb_open.csv"
+#hpwh_log="/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/Data/final_logs/hpwh_logs/hpwh_no_loadup_emcb_open.csv"
+
+hpwh_log="/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/Data/final_logs/hpwh_logs/hpwh_emcb_open_no_load_up_v2.csv"
+
 
 df1 = pd.read_csv(hpwh_log)
 
 # This function plots energyTake closed emcb for hpwh
 
 
-def hpwh_energyTake_loadup(log):
+def hpwh_energyTake_no_loadup(log):
     x = log['timestamp']
     x = pd.to_datetime(log['timestamp'])
     x = pd.to_datetime(x)
@@ -27,12 +30,12 @@ def hpwh_energyTake_loadup(log):
     ax.set_xlim([0,x_max]) 
     ax.set_title('EnergyTake VS Time')
     ax.legend(loc='upper right')
-    ax.annotate('VP Shed Command Received',xy=('06:44',150),xytext=('02:01',300),arrowprops=dict(arrowstyle='-|>'))
-    ax.annotate('VP Shed Command Received',xy=('18:54',150),xytext=('14:07',300),arrowprops=dict(arrowstyle='-|>'))
-    ax.annotate('VP Shed Command Received',xy=('19:54',450),xytext=('14:07',300),arrowprops=dict(arrowstyle='-|>'))
+    ax.annotate('VP Shed Command Received',xy=('06:41',625),xytext=('00:50',100),arrowprops=dict(arrowstyle='-|>'))
+    ax.annotate('VP Shed Command Received',xy=('18:55',150),xytext=('14:07',300),arrowprops=dict(arrowstyle='-|>'))
+    ax.annotate('VP Shed Command Received',xy=('19:56',1275),xytext=('14:07',300),arrowprops=dict(arrowstyle='-|>'))
     #plt.show()
-    #plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/hpwh/overleaf_figures/hpwh_no_load_up_energyTake_emcb_open.png")
-#hpwh_energyTake_loadup(df1)
+    plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/hpwh/overleaf_figures/hpwh_no_load_up_energyTake_emcb_open.png")
+hpwh_energyTake_no_loadup(df1)
 
 
 
@@ -67,6 +70,6 @@ def hpwh_energyTake_loadup(log):
     ax.annotate('VP Shed Command Received',xy=('19:56',1275),xytext=('14:07',1275),arrowprops=dict(arrowstyle='-|>'))
 
     #plt.show()
-    plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/hpwh/overleaf_figures/hpwh_load_up_energyTake_emcb_open.png")
-hpwh_energyTake_loadup(df1)
+    #plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/hpwh/overleaf_figures/hpwh_load_up_energyTake_emcb_open.png")
+#hpwh_energyTake_loadup(df1)
 
