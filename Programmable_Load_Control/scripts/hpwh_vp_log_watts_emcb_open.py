@@ -121,6 +121,6 @@ def hpwh_vp_vs_log_loadup(log,vp):
     ax[0].annotate('Loadup Command Received',xy=('05:32',0),xytext=('00:47',600),arrowprops=dict(arrowstyle='-|>'))
     ax[1].annotate('Loadup Command Received',xy=('05:29',0),xytext=('00:47',600),arrowprops=dict(arrowstyle='-|>'))
 
-    #plt.show()
-    plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/hpwh/overleaf_figures/hpwh_vp_load_up_watts_emcb_open.png")
+    plt.show()
+    #plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/hpwh/overleaf_figures/hpwh_vp_load_up_watts_emcb_open.png")
 hpwh_vp_vs_log_loadup(df1,df2)

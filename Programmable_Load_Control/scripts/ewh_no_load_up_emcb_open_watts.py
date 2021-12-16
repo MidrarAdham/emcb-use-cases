@@ -123,6 +123,6 @@ def ewh_vp_vs_log_loadup(log,vp):
     ax[1].annotate('Loadup Command Received',xy=('18:16',0),xytext=('12:26',500),arrowprops=dict(arrowstyle='-|>'))
     
     fig.tight_layout()
-    #plt.show()
-    plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/ewh/overleaf_figures/ewh_vp_load_up_watts_emcb_open.png")
+    plt.show()
+    #plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/ewh/overleaf_figures/ewh_vp_load_up_watts_emcb_open.png")
 ewh_vp_vs_log_loadup(df1,df2)

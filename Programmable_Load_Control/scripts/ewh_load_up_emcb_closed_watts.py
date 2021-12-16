@@ -97,8 +97,8 @@ def ewh_vp_vs_log_No_loadup(log,vp):
     ax[0].legend(loc='upper right')
     ax[1].legend(loc='upper right')
     ax[0].set_title('EWH Consumed Watts: WH Station and VP')
-    #plt.show()
-    plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/ewh/overleaf_figures/ewh_No_load_up_emcb_closed.png")
+    plt.show()
+    #plt.savefig("/home/parallels/Desktop/emcb-use-cases/Programmable_Load_Control/figures/ewh/overleaf_figures/ewh_No_load_up_emcb_closed.png")
 ewh_vp_vs_log_No_loadup(df1,df2)
 
 
